@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>LyricsSearch</title>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>LyricsSearch</h1>
+      <form id="form" aria-label="Search for artists or songs">
+        <input
+          type="text"
+          id="search"
+          placeholder="Search artist or song (e.g. Adele, Hello)..."
+          aria-label="Search input"
+          autocomplete="off"
+        />
+        <button type="submit">Search</button>
+      </form>
+
+      <!-- Loading spinner -->
+      <div id="loading" aria-hidden="true" class="loading hidden" title="Loading">
+        <div class="spinner"></div>
+      </div>
+    </header>
+
+    <main>
+      <div id="result" class="container" aria-live="polite">
+        <p>Results will be displayed here</p>
+      </div>
+
+      <!-- Pagination controls -->
+      <div id="more" class="container centered" aria-hidden="false"></div>
+
+      <!-- Favorites saved in localStorage -->
+      <section id="favorites" class="container">
+        <h2>Your favorites</h2>
+        <p id="no-favorites">No favorites yet. Click "Save" on any song.</p>
+        <ul id="favorites-list" class="songs"></ul>
+      </section>
+    </main>
+  </body>
+</html>

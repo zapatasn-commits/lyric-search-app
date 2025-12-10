@@ -1,0 +1,39 @@
+/* Loading spinner */
+.loading {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  z-index: 2;
+}
+.hidden { display: none; }
+
+.spinner {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 4px solid rgba(255,255,255,0.3);
+  border-top-color: white;
+  animation: spin 0.9s linear infinite;
+}
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+/* Favorites section */
+#favorites {
+  margin-top: 20px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  padding-top: 16px;
+}
+#favorites h2 {
+  margin: 0 0 10px;
+  font-weight: 400;
+}
+#favorites .songs li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.btn.small {
+  padding: 6px 8px;
+  font-size: 13px;
+  border-radius: 6px;
+}
